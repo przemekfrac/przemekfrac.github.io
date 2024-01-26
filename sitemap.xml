@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://przemekfrac.github.io/</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/index.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/zwierzeta.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/przyroda.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/krajobraz.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/morze.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/contact.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/login.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/index_de.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/index_eng.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/zwierzeta_eng.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/przyroda_eng.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/krajobraz_eng.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://przemekfrac.github.io/morze_eng.html</loc>
+  <lastmod>2024-01-26T12:28:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
