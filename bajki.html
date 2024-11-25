@@ -31,6 +31,10 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+		
+		<!-- Vendor CSS Files -->
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+		
     </head>
 
     <body>
@@ -110,11 +114,31 @@
         </div>
         <!-- Navbar End -->
         
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+        
         <!-- Services Start -->
         <div class="container-fluid services py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 800px;">
-                    <p class="fs-4 text-uppercase text-center text-primary">Bajki Telewizja</p>
+                    <p class="fs-4 text-uppercase text-center text-primary">Stare Piosenki</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-6">
@@ -123,11 +147,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Wilk i Zając</h3>
-                                        <p>Ну, погоди! Premiera pierwszego odcinka miała miejsce 1 stycznia 1969 roku. Radziecki, potem rosyjski serial animowany. Opowiada o przygodach Wilka, który próbuje dopaść Zająca.</p>
-										<audio controls="controls" >
-										<source src="mp3/wilk.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Ну, погоди! Radziecki, potem rosyjski serial animowany, premiera 1 stycznia 1969r</p>
+										<audio id="audio1">
+										<source src="mp3/wilk.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio1')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio1')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -149,11 +175,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Miś Uszatek</h3>
-                                        <p>Serial animowany, emitowany od 1975 do 1987. Jest to brązowy, pluszowy miś. Mieszka sam w domku, ubiera się jak człowiek i chodzi do przedszkola. Jego przyjaciółmi są m.in. Prosiaczek, Króliczki.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/uszatek.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Serial animowany, emitowany od 1975 do 1987, opowiada o brązowym, pluszowym misiu</p>
+                                        <audio id="audio2">
+										<source src="mp3/uszatek.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio2')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio2')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -164,12 +192,14 @@
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
-                                        <h3>Reksio</h3>
-                                        <p>Polski serial animowany dla dzieci w reżyserii i według scenariusza Lechosława Marszałka, produkowany w latach 1967–1990 przez Studio Filmów Rysunkowych w Bielsku-Białej.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/reksio.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+									    <h3>Reksio</h3>
+                                        <p>Polski serial animowany dla dzieci w reżyserii i według scenariusza Lechosława Marszałka</p>
+										<audio id="audio3">
+										<source src="mp3/reksio.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio3')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio3')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -191,11 +221,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Bolek i Lolek</h3>
-                                        <p>Seria Bolek i Lolek została zainicjowana w 1962r. Ostatnie filmy o ich przygodach nakręcono w 1986r. Łącznie nakręcono 183 odcinków. W 2011r. w Bielsku-Białej odsłonięto pomnik Bolka i Lolka.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/bolek.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Seria Bolek i Lolek została zainicjowana w 1962r. Ostatnie filmy nakręcono w 1986</p>
+                                        <audio id="audio4">
+										<source src="mp3/bolek.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio4')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio4')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -207,11 +239,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Porwanie Baltazara Gąbki</h3>
-                                        <p>Polski kolorowy serial animowany, zrealizowany w latach 1969–1970 na podstawie książki autorstwa Stanisława Pagaczewskiego (1965). Każdy odcinek trwa około 6 minut.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/baltazar.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Polski kolorowy serial animowany, zrealizowany w latach 1969–1970 na podstawie książki</p>
+                                        <audio id="audio5">
+										<source src="mp3/baltazar.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio5')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio5')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -233,11 +267,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Żwirek i Muchomorek</h3>
-                                        <p>1970r. Bajki z mchu i paproci (cz. Pohádky z mechu a kapradí) – czechosłowacki serial animowany. Bohaterami są dwa skrzaty: chudy Żwirek (Křemílek) i gruby Muchomorek (Vochomůrka).</p>
-                                        <audio controls="controls" >
-										<source src="mp3/zwirek.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>1970r, Bajki z mchu i paproci(Pohádky z mechu a kapradí) czechosłowacki serial animowany</p>
+                                        <audio id="audio6">
+										<source src="mp3/zwirek.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio6')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio6')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -249,11 +285,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Koziołek Matołek</h3>
-                                        <p>Serial powstał w latach 1969–1971. Postać stworzona przez Kornela Makuszyńskiego i Mariana Walentynowicza w jednej z pierwszych w Polsce historyjek obrazkowych dla dzieci w 1932r.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/koziolek.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Serial powstał w latach 1969–1971. Stworzyli go K. Makuszyński i M. Walentynowicz w 1932</p>
+                                        <audio id="audio7">
+										<source src="mp3/koziolek.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio7')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio7')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -275,11 +313,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Przygody Kota Filemona</h3>
-                                        <p>Serial emitowany w latach 1977–1981 jest kontynuacją serialu Dziwny świat kota Filemona (1972–1974). Opowiada o dalszych losach młodego kotka Filemona i dorosłego kota Bonifacego.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/filemon.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Serial z 1977–1981. Opowiada o losach młodego kotka Filemona i dorosłego kota Bonifacego</p>
+                                        <audio id="audio8">
+										<source src="mp3/filemon.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio8')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio8')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -291,11 +331,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Piątek z Pankracym</h3>
-                                        <p>Program emitowany od 1978-1990r. w piątki, około 16:40, w programie pierwszym(wszystkie oryginalne zapisy wideo zostały skasowane). Pierwszym prowadzącym był Zygmunt Kęstowicz.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/pankracy.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Program emitowany od 1978-1990r, w piątki, około 16:40. Prowadzący Zygmunt Kęstowicz</p>
+										<audio id="audio9">
+										<source src="mp3/pankracy.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio9')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio9')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -317,27 +359,31 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Teleranek</h3>
-                                        <p>Telewizyjny program dla dzieci nadawany od września 1972 roku do grudnia 2009 roku i ponownie od 6 marca 2016 roku w TVP1, natomiast od 4 września 2016 w TVP ABC.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/teleranek.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Telewizyjny program dla dzieci nadawany od września 1972 roku do grudnia 2009</p>
+                                        <audio id="audio10">
+										<source src="mp3/teleranek.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio10')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio10')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Pszczółka Maja</h3>
-                                        <p>W Polsce po raz pierwszy serial był wyemitowany 26 grudnia 1979 roku do 1982 roku na kanale TVP1. Śpiewał: Zbigniew Wodecki, Ewa Złotowska – Maja, Jan Kociniak – Gucio.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/maja.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>W Polsce po raz pierwszy serial był wyemitowany 26 grudnia 1979 roku do 1982 roku w TVP1</p>
+										<audio id="audio11">
+										<source src="mp3/maja.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio11')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio11')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -359,27 +405,31 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Zaczarowany Ołówek</h3>
-                                        <p>Serial zrealizowany w latach 1964–1977, o przygodach chłopca o imieniu Piotrek, który rysuje ołówkiem(wszystko, co nim narysują, materializuje się) i pieska zwanego Pimpek.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/olowek.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Serial zrealizowany w latach 1964–1977, o przygodach chłopca rysującego ołówkiem</p>
+                                        <audio id="audio12">
+										<source src="mp3/olowek.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio12')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio12')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Pomysłowy Dobromir</h3>
-                                        <p>Polski dobranockowy serial animowany tworzony w latach 1973–1975. Wyprodukowano 20 dziesięciominutowych odcinków. Występują Dobromir, Dziadek i Ptaszek(prawdopodobnie szpak).</p>
-                                        <audio controls="controls" >
-										<source src="mp3/dobromir.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Polski dobranockowy serial animowany(20 odcików) tworzony w latach 1973–1975</p>
+                                        <audio id="audio13">
+										<source src="mp3/dobromir.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio13')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio13')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -401,27 +451,31 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Sąsiedzi</h3>
-                                        <p>Czechosłowacki lalkowy serial animowany opowiadający o perypetiach dwóch nieudolnych majsterkowiczów, Pata i Mata. Stworzony w 1976r. przez Lubomíra Beneša oraz Vladimíra Jiránka.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/sasiedzi.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Czechosłowacki lalkowy serial animowany o dwóch nieudolnych majsterkowiczach. Pat i Mat</p>
+                                        <audio id="audio14">
+										<source src="mp3/sasiedzi.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio14')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio14')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Sindbad</h3>
-                                        <p>Przygody Sindbada żeglarza emitowane były w TVP1 w niedzielne popołudnia w latach 80 w cyklu "Kino familijne". W większości krajów poza Japonią wyemitowano jedynie 42 pierwsze odcinki.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/sindbad.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Przygody Sindbada żeglarza emitowane były w TVP1 w niedzielne popołudnia w latach 80</p>
+                                        <audio id="audio15">
+										<source src="mp3/sindbad.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio15')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio15')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -443,11 +497,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Zwierzyniec</h3>
-                                        <p>Przyrodniczy program telewizyjny. Emitowany w TVP 1968-1988 w paśmie popołudniowym w poniedziałki, typowo od 16:30 do 17:30. Gospodarzem programu był Michał Sumiński.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/zwierzyniec.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Przyrodniczy program telewizyjny, emitowany w TVP 1968-1988. Prowadził Michał Sumiński</p>
+                                        <audio id="audio16">
+										<source src="mp3/zwierzyniec.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio16')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio16')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -459,11 +515,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Tik-Tak</h3>
-                                        <p>Program miał swoją premierę w styczniu 1982 roku. Początkowo był audycją kukiełkową. W roku 1983 dołączyli do niego aktorzy. Ostatni odcinek programu został wyemitowany w 1999 roku.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/tiktak.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Program miał swoją premierę w styczniu 1982 roku. Początkowo był audycją kukiełkową</p>
+										<audio id="audio17">
+										<source src="mp3/tiktak.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio17')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio17')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -485,27 +543,31 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>5-10-15</h3>
-                                        <p>1982-2007. Nadawany był w soboty, w TVP2 w godzinach okołopołudniowych. Później został przeniesiony do TVP1, zastępując program Drops, nadawany w sobotnie poranki o godzinie 9:00.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/51015.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>1982-2007. Nadawany był w soboty, w TVP2 w godzinach okołopołudniowych</p>
+                                        <audio id="audio18">
+										<source src="mp3/51015.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio18')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio18')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Domowe Przedszkole</h3>
-                                        <p>Program nadawany w TVP1 w latach 80. i 90. Emitowany był od poniedziałku do piątku. 21 czerwca 2000 roku program został zdjęty z anteny z powodu zbyt niskiej oglądalności.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/przedszkole.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Program nadawany w TVP1 w latach 80. i 90. Emitowany był od poniedziałku do piątku</p>
+										<audio id="audio19">
+										<source src="mp3/przedszkole.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio19')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio19')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -527,27 +589,31 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Kulfon</h3>
-                                        <p>W 1986–1989 Kulfon występował w programie „Wyprawy profesora Ciekawskiego”, w 89/90 – w programie „Trąba”, w 90/91 – w programie „Lizak”, a w latach 1992–2000 w „Ciuchci”.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/kulfon.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>W 1986–2000 postać fikcyjna, kukiełkowy bohater programów dziecięcych TVP</p>
+                                        <audio id="audio20">
+										<source src="mp3/kulfon.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio20')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio20')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Muppets - Mapety</h3>
-                                        <p>Lalki teatralne stworzone w 1955 przez amerykańskiego lalkarza, reżysera i scenarzystę Jima Hensona. Imitują one ludzi, zwierzęta oraz fantastyczne stwory. Kermit Żaba, Miś Fozzie, Gonzo, Piggy.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/muppets.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Lalki teatralne stworzone w 1955 przez amer. lalkarza, reżysera i scenarzystę J. Hensona</p>
+                                        <audio id="audio21">
+										<source src="mp3/muppets.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio21')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio21')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -569,11 +635,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Fraggle Rock - Fraglesy</h3>
-                                        <p>Wyświetlany był 1 czerwca 1985 w paśmie dla dzieci i młodzieży: Drops. Podzielony na 5 sezonów – w sumie 96 odcinków od 1983 do 1987 roku. Stworzony przez Jima Hensona. Gobo, Red, Boober, Mokey.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/fraggles.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Premiera 1985, w sumie 96 odcinków. Serial lalkowy koprodukcji amer.-bryt.-kanad.</p>
+                                        <audio id="audio22">
+										<source src="mp3/fraggles.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio22')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio22')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -624,13 +692,27 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 	
 	<script>
 	$(document).ready(function(){
-	$('[data-toggle="tooltip"]').tooltip();   
+	
+	$('[data-toggle="tooltip"]').tooltip();  
+	
 	});
 	</script>
 	
-    </body>
+	<script>
+	function playAudio(id) {
+      let x = document.getElementById(id);
+      x.play();
+    }
 
+    function pauseAudio(id) {
+      let x = document.getElementById(id);
+      x.pause();
+    }
+	</script>
+    </body>
 </html>

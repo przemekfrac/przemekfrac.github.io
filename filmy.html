@@ -31,6 +31,10 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+		
+		<!-- Vendor CSS Files -->
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+		
     </head>
 
     <body>
@@ -110,6 +114,26 @@
         </div>
         <!-- Navbar End -->
         
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+        
         <!-- Services Start -->
         <div class="container-fluid services py-5">
             <div class="container py-5">
@@ -123,11 +147,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Kariera Nikodema Dyzmy</h3>
-                                        <p>Polski siedmioodcinkowy serial telewizyjny emitowany w TVP od 6 kwietnia 1980 do 18 maja 1980. Scenariusz powstał na podstawie powieści Tadeusza Dołęgi-Mostowicza o tym samym tytule z 1931r.</p>
-										<audio controls="controls" >
-										<source src="mp3/dyzma.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Siedmioodcinkowy serial telewizyjny emitowany w TVP od 6 kwietnia 1980 do 18 maja 1980</p>
+										<audio id="audio1">
+										<source src="mp3/dyzma.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio1')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio1')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -149,11 +175,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Alternatywy 4</h3>
-                                        <p>Polski serial komediowy z 1983 roku w reżyserii Stanisława Barei, emitowany premierowo przez Program Pierwszy Telewizji Polskiej od 30 września do 25 listopada 1986 roku.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/alternatywy.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Serial z 1983r. w reżyserii Stanisława Barei, emitowany od 30.09 do 25.11.1986</p>
+                                        <audio id="audio2">
+										<source src="mp3/alternatywy.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio2')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio2')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -165,11 +193,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Vabank</h3>
-                                        <p>Polska komedia kryminalna retro w reżyserii Juliusza Machulskiego z 1981, będąca jego pełnometrażowym debiutem fabularnym. Henryk Kwinto(Jan Machulski), Gustaw Kramer(Leonard Pietraszak).</p>
-                                        <audio controls="controls" >
-										<source src="mp3/vabank.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Polska komedia kryminalna retro w reżyserii Juliusza Machulskiego z 1981</p>
+										<audio id="audio3">
+										<source src="mp3/vabank.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio3')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio3')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -191,11 +221,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Janosik</h3>
-                                        <p>1973r. Reżyseria Jerzy Passendorfer, emitowany w TVP1 od 26 lipca do 18 października 1974r. nawiązujący do postaci tatrzańskiego zbójnika Juraja Jánošíka, żyjącego na przełomie XVII i XVIII w.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/janosik.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>1973r, reż. Jerzy Passendorfer, emitowany w TVP1 od 26 lipca do 18 października 1974</p>
+                                        <audio id="audio4">
+										<source src="mp3/janosik.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio4')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio4')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -207,11 +239,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Niebieskie lato</h3>
-                                        <p>Niebieskie lato (hiszp. Verano azul) – młodzieżowy serial telewizyjny hiszpański z 1981 roku. Składał się z dziewiętnastu 55-minutowych odcinków, wyreżyserowanych przez Antonio Mercero.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/lato.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Niebieskie lato (hiszp. Verano azul) – młodzieżowy serial telewizyjny hiszpański z 1981r</p>
+                                        <audio id="audio5">
+										<source src="mp3/lato.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio5')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio5')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -233,11 +267,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Sami Swoi</h3>
-                                        <p>Polski film komediowy z 1967 roku w reżyserii Sylwestra Chęcińskiego. Wacław Kowalski − Kazimierz, Władysław Hańcza − Władysław. Nie ma mocnych (1974), Kochaj albo rzuć (1977).</p>
-                                        <audio controls="controls" >
-										<source src="mp3/samiswoi.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Polski film komediowy z 1967 roku w reżyserii Sylwestra Chęcińskiego</p>
+                                        <audio id="audio6">
+										<source src="mp3/samiswoi.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio6')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio6')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -249,11 +285,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Pegaz</h3>
-                                        <p>Pierwszy program został wyemitowany w 1959r. Magazyn telewizyjny poświęcony kulturze i sztuce emitowany w TVP w 1959–2004, 2009 i 2016–2019. Sygnał dźwiękowy stworzył Stefan Zawarski.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/pegaz.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Pierwszy program został wyemitowany w 1959r. Magazyn telewizyjny poświęcony kulturze i sztuce</p>
+                                        <audio id="audio7">
+										<source src="mp3/pegaz.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio7')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio7')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -275,11 +313,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Dynastia</h3>
-                                        <p>W Polsce po raz pierwszy emitowany w TVP1 od 1990-1993. W wakacje 1990 emisja odbywała się od poniedziałku do piątku o 18.00, a następnie raz w tygodniu. Blake Carrington, Alexis, Krystle.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/dynastia.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>W Polsce po raz pierwszy emitowany w TVP1 od 1990-1993. Blake Carrington, Alexis, Krystle</p>
+                                        <audio id="audio8">
+										<source src="mp3/dynastia.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio8')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio8')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -291,11 +331,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>W Starym Kinie</h3>
-                                        <p>1967–1999. Prezentowano w nim starsze produkcje filmowe. Autorem i prowadzącym program Stanisław Janicki. Był to najdłużej nadawany program filmowy w historii polskiej telewizji.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/starekino.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>1967–1999. Prezentowano w nim starsze produkcje filmowe. Prowadzący Stanisław Janicki</p>
+										<audio id="audio9">
+										<source src="mp3/starekino.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio9')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio9')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -317,27 +359,31 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Lato z Radiem</h3>
-                                        <p>1 lipca 1971r. Audycja nadawana latem w Programie I Polskiego Radia. Magazyn turystyczny, trwający tylko kilkanaście minut. Sygnałem Lata z radiem jest utwór „Polka Dziadek”.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/latozradiem.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>1 lipca 1971r, utwór „Polka Dziadek”. Audycja nadawana latem w Programie I Polskiego Radia</p>
+                                        <audio id="audio10">
+										<source src="mp3/latozradiem.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio10')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio10')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Arabela</h3>
-                                        <p>1978–1980. Serial czechosłowacki. W następnych latach powstały kolejne produkcje: w 1984 film Rumburak, a w 1993 26-odcinkowy serial telewizyjny Powrót Arabeli.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/arabela.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>1978–1980. Serial telewizyjny dla dzieci i młodzieży produkowany w Czechosłowacji</p>
+										<audio id="audio11">
+										<source src="mp3/arabela.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio11')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio11')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -359,27 +405,31 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Szpital na peryferiach</h3>
-                                        <p>I seria (odc. 1–13) – 1977, II seria (odc. 14–20) – 1981. Czechosłowacki serial telewizyjny. Opowiada losy pracowników oddziału ortopedii w peryferyjnym czeskim szpitalu oraz sprawy prywatne.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/szpital.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>I seria (odc. 1–13) – 1977, II seria (odc. 14–20) – 1981. Czechosłowacki serial telewizyjny</p>
+                                        <audio id="audio12">
+										<source src="mp3/szpital.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio12')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio12')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Kobieta za ladą</h3>
-                                        <p>Data premiery styczeń 1977 a w Polsce kwiecień 1983r. (czes. Žena za pultem) – 12-odcinkowy serial produkcji czechosłowackiej. Jiřina Švorcová - Anna Holubova, Petr Haničinec - Karel Brož.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/kobieta.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Premiera w Czechach w 1977r. a w Polsce kwiecień 1983r, serial czechosłowacki</p>
+                                        <audio id="audio13">
+										<source src="mp3/kobieta.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio13')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio13')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -401,27 +451,31 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Czarne Chmury</h3>
-                                        <p>Polski przygodowy serial telewizyjny z 1973 r. konwencji kostiumowej „płaszcza i szpady” wyprodukowany przez Telewizję Polską, skłądający się z dziesięciu prawie 1-godzinnych odcinków.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/czarne.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Polski przygodowy serial telewizyjny z 1973 r. konwencji kostiumowej „płaszcza i szpady”</p>
+                                        <audio id="audio14">
+										<source src="mp3/czarne.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio14')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio14')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Zmiennicy</h3>
-                                        <p>Reżyseria Stanisław Bareja, emitowany w TVP1 od 18 października 1987 do 12 lutego 1988. Jacek Żytkiewicz - Mieczysław Hryniewicz, Katarzyna Piórecka - Ewa Błaszczyk, Ceglarek - Marian Opania.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/zmiennicy.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Reżyseria Stanisław Bareja, emitowany w TVP1 od 18 października 1987 do 12 lutego 1988</p>
+                                        <audio id="audio15">
+										<source src="mp3/zmiennicy.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio15')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio15')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -443,11 +497,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Jak rozpętałem II w.ś.</h3>
-                                        <p>Jak rozpętałem drugą wojnę światową. Premiera kwiecień 1970r. Komedia wojenna. Reżyseria  Tadeusz Chmielewski, na podstawie powieści Kazimierza Sławińskiego Przygody kanoniera Dolasa.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/rozpetalem.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Jak rozpętałem drugą wojnę światową. Premiera kwiecień 1970r. Komedia wojenna</p>
+                                        <audio id="audio16">
+										<source src="mp3/rozpetalem.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio16')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio16')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -459,11 +515,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Czterej pancerni i pies</h3>
-                                        <p>1966–1970. Czarno-biały serial telewizyjny w reżyserii Konrada Nałęckiego, według scenariusza Janusza Przymanowskiego na podstawie książki tegoż autora pod tym samym tytułem.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/pancerni.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>1966–1970. Czarno-biały serial telewizyjny w reżyserii Konrada Nałęckiego</p>
+										<audio id="audio17">
+										<source src="mp3/pancerni.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio17')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio17')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -485,27 +543,31 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Zakazane Piosenki</h3>
-                                        <p>Premiera 1947r. Polski czarno-biały muzyczny film fabularny w reżyserii Leonarda Buczkowskiego, według scenariusza Ludwika Starskiego. Danuta Szaflarska - Halina Tokarska.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/zakazane.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Premiera 1947r. Czarno-biały muzyczny film fabularny w reżyserii Leonarda Buczkowskiego</p>
+                                        <audio id="audio18">
+										<source src="mp3/zakazane.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio18')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio18')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Akademia pana Kleksa</h3>
-                                        <p>Premiera 1984r. Polsko-radziecka muzyczna baśń filmowa z 1983 roku w reżyserii Krzysztofa Gradowskiego, będąca adaptacją książki o tym samym tytule autorstwa Jana Brzechwy.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/kleks.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Premiera 1984r. Polsko-radziecka muzyczna baśń filmowa z 1983 roku, reż. K. Gradowski</p>
+										<audio id="audio19">
+										<source src="mp3/kleks.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio19')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio19')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -527,27 +589,31 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Polskie Drogi</h3>
-                                        <p>Polski serial telewizyjny z 1976 i 1977, epicka opowieść o losach Polaków w czasie II wojny światowej. Scenariusz Jerzy Janicki, reżyser Janusz Morgenstern. Karol Strasburger, Kazimierz Kaczor.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/drogi.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Serial telewizyjny z 1976 i 1977, epicka opowieść o losach Polaków w czasie II wojny światowej</p>
+                                        <audio id="audio20">
+										<source src="mp3/drogi.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio20')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio20')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Nie lubię poniedziałku</h3>
-                                        <p>Polska barwna komedia filmowa z 1971 roku w reżyserii Tadeusza Chmielewskiego, nakręcona na podstawie autorskiego scenariusza. Bohdan Łazuka, Jerzy Turek, Kazimierz Witkiewicz.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/poniedzialku.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Polska barwna komedia filmowa z 1971 roku w reżyserii Tadeusza Chmielewskiego</p>
+                                        <audio id="audio21">
+										<source src="mp3/poniedzialku.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio21')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio21')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -569,11 +635,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Czterdziestolatek</h3>
-                                        <p>Polski serial komediowy w reżyserii Jerzego Gruzy. Premiera 16 maja 1975. Tytułową rolę zagrał Andrzej Kopiczyński. Anna Seniuk, Irena Kwiatkowska, Roman Kłosowski, Leonard Pietraszak.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/czterdziestolatek.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Polski serial komediowy w reżyserii Jerzego Gruzy. Premiera 16 maja 1975</p>
+                                        <audio id="audio22">
+										<source src="mp3/czterdziestolatek.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio22')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio22')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -585,11 +653,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Stawka większa niż życie</h3>
-                                        <p>Polski szpiegowski serial telewizyjny z lat 1967–1968 w reżyserii Janusza Morgensterna i Andrzeja Konica. J23 nadaje, nie ze mną te numery Brunner. Stanisław Mikulski, Emil Karewicz.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/stawka.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Polski szpiegowski serial telewizyjny z lat 1967–1968, reż: J. Morgenstern i A. Konic</p>
+                                        <audio id="audio23">
+										<source src="mp3/stawka.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio23')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio23')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -611,11 +681,13 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Wojna domowa</h3>
-                                        <p>Czarno-biały serial komediowy z lat 1965–1966, powstały na kanwie felietonów Miry Michałowskiej publikowanych w tygodniku „Przekrój”, wydanych w zbiorach Wojna domowa i Wojna domowa trwa.</p>
-                                        <audio controls="controls" >
-										<source src="mp3/domowa.mp3" type="audio/mp3" />
-										Twoja przeglądarka nie obsługuje elementu audio.
+                                        <p>Czarno-biały serial komediowy z lat 1965–1966, powstały na kanwie felietonów Miry Michałowskiej</p>
+                                        <audio id="audio24">
+										<source src="mp3/domowa.mp3" type="audio/mp3">
+										Twoja przeglądarka nie obsługuje elementu audio
 										</audio>
+										<button onclick="playAudio('audio24')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Play</button>
+										<button onclick="pauseAudio('audio24')" type="button" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Stop</button>
                                     </div>
                                 </div>
                             </div>
@@ -666,13 +738,27 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 	
 	<script>
 	$(document).ready(function(){
-	$('[data-toggle="tooltip"]').tooltip();   
+	
+	$('[data-toggle="tooltip"]').tooltip();  
+	
 	});
 	</script>
 	
-    </body>
+	<script>
+	function playAudio(id) {
+      let x = document.getElementById(id);
+      x.play();
+    }
 
+    function pauseAudio(id) {
+      let x = document.getElementById(id);
+      x.pause();
+    }
+	</script>
+    </body>
 </html>
